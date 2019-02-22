@@ -1,0 +1,55 @@
+/*
+* 自定义css变量
+*/
+@primaryColor:#38adff;
+@redColor:#ff544c;
+@backgroundColor:#f5f5f5;
+@color3:#333;
+@color6:#666;
+@color9:#999;
+
+/*单位*/
+@u: 32;
+@uu: rem;
+/**单位常量使用方法 unit(100/@u,@uu)  nuit: less删除或更换单位行数 nuit(数值,单位)**/
+/*css3*/
+image[lazy=loading] {
+  width: 40px;
+  height: 300px;
+  margin: auto;
+}
+.transform-rotate(@deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+.border-radius (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-sizing(...) {
+  -webkit-box-sizing: @arguments; /* Safari 和 Chrome */
+  -moz-box-sizing: @arguments; /* Firefox */
+  -ms-box-sizing: @arguments; /* IE 9 */
+  -o-box-sizing: @arguments; /* Opera */
+  box-sizing: @arguments;
+}
+.box-shadow (@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  -ms-box-shadow: @shadow;
+  -o-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+.linear-gradient(@direction, @colorFrom, @colorTo) {
+  background-image: -webkit-linear-gradient(to @direction, @colorFrom, @colorTo);
+  background-image: -moz-linear-gradient(to @direction, @colorFrom, @colorTo);
+  background-image: -ms-linear-gradient(to @direction, @colorFrom, @colorTo);
+  background-image: -o-linear-gradient(to @direction, @colorFrom, @colorTo);
+  background-image: linear-gradient(to @direction, @colorFrom, @colorTo);
+}
